@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.8 # Specify the Python version you want to use
+    commands:
+      - echo "Installing dependencies..."
+      # If there are no dependencies, you can skip the pip install
+  build:
+    commands:
+      - echo "Build started on $(date)"
+      - python hello-world.py # Run the Python script
+  post_build:
+    commands:
+      - echo "Build completed on $(date)"
+      - echo "Hello World! Build completed successfully."
